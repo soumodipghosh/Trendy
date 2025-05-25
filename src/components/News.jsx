@@ -6,14 +6,20 @@ const News = () => {
   const [newsData, setNewsData] = useState([])
   
 
-  const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+  //const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
-  const getData = async() => {
-    const response = await fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`);
+  const getData = async () => {
+  try {
+    const response = await fetch(`http://localhost:5000/api/news?q=${search}`);
     const jsonData = await response.json();
     console.log(jsonData.articles);
-    setNewsData(jsonData.articles)
+    setNewsData(jsonData.articles);
+  } catch (error) {
+    console.error("Error fetching data:", error);
   }
+};
+
+
   const handleInput = (e) => {
     console.log(e.target.value);
     setSearch(e.target.value)
