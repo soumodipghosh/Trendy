@@ -17,7 +17,7 @@ const News = () => {
 
   const getData = async () => {
   try {
-    const response = await fetch(`https://your-backend.onrender.com/api/news?q=${search}`);
+    const response = await fetch(`https://trendy-9.onrender.com/api/news?q=${search}`);
     const jsonData = await response.json();
     console.log(jsonData.articles);
     setNewsData(jsonData.articles);
