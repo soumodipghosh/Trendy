@@ -6,7 +6,7 @@ const News = () => {
   const [newsData, setNewsData] = useState([])
   
 
-  const API_KEY = "deead443f0014fa3bd4301636136f0f8";
+  const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
   const getData = async() => {
     const response = await fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`);
@@ -35,8 +35,8 @@ const News = () => {
             <h1>Trendy</h1>
         </div>
         <ul className='hidden lg:flex md:flex lg:gap-10 md:gap-5'>
-            <li href="" onClick={() => setSearch("All News")} className='hover:underline cursor-pointer'>All News</li>
-            <li href="" onClick={() => setSearch("Trending")} className='hover:underline cursor-pointer'>Trending</li>
+            <li onClick={() => setSearch("All News")} className='hover:underline cursor-pointer'>All News</li>
+            <li onClick={() => setSearch("Trending")} className='hover:underline cursor-pointer'>Trending</li>
         </ul>
         <div className='flex gap-1 items-center'>
             <input type="text" placeholder='Search Here...' value={search} className='w-[150px] border-none p-1 rounded-lg' onChange={handleInput} />
