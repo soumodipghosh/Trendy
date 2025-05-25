@@ -76,7 +76,7 @@ const News = () => {
 
 
 
-      <div className='justify-center gap-2 grid grid-cols-3 lg:flex p-1 lg:gap-5 font-semibold text-white mt-3'>
+      <div className='justify-center gap-2 grid grid-cols-3 lg:flex p-1 lg:gap-5 font-semibold text-white mt-3 md:px-9'>
         <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Sports">Sports</button>
         <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Politics">Politics</button>
         <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Entertainment">Entertain</button>
