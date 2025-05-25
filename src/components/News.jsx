@@ -8,12 +8,24 @@ const News = () => {
 
   const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
-  const getData = async() => {
+  {/* const getData = async() => {
     const response = await fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`);
     const jsonData = await response.json();
     console.log(jsonData.articles);
     setNewsData(jsonData.articles)
+  } */}
+
+  const getData = async () => {
+  try {
+    const response = await fetch(`https://your-backend.onrender.com/api/news?q=${search}`);
+    const jsonData = await response.json();
+    console.log(jsonData.articles);
+    setNewsData(jsonData.articles);
+  } catch (error) {
+    console.error("Error fetching data from backend proxy:", error);
   }
+};
+
   const handleInput = (e) => {
     console.log(e.target.value);
     setSearch(e.target.value)
@@ -70,7 +82,7 @@ const News = () => {
 
 
 
-      <div className='justify-center gap-2 grid grid-cols-3 lg:flex p-1 lg:gap-5 font-semibold text-white mt-3'>
+      <div className='justify-center gap-2 grid grid-cols-3 lg:flex p-1 lg:gap-5 font-semibold text-white mt-3 md:px-8'>
         <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Sports">Sports</button>
         <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Politics">Politics</button>
         <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Entertainment">Entertain</button>
