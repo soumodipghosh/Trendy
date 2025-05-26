@@ -6,16 +6,16 @@ const News = () => {
   const [newsData, setNewsData] = useState([])
   
 
-  const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+  // const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
-  const getData = async() => {
+  { /* const getData = async() => {
     const response = await fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`);
     const jsonData = await response.json();
     console.log(jsonData.articles);
     setNewsData(jsonData.articles)
-  } 
+  } */}
 
-  {/* const getData = async () => {
+  const getData = async () => {
   try {
     const response = await fetch(`https://trendy-9.onrender.com/api/news?q=${search}`);
     const jsonData = await response.json();
@@ -24,7 +24,7 @@ const News = () => {
   } catch (error) {
     console.error("Error fetching data from backend proxy:", error);
   }
-}; */} 
+};  
 
   const handleInput = (e) => {
     console.log(e.target.value);
