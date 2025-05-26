@@ -46,7 +46,7 @@ const News = () => {
             <li onClick={() => setSearch("Trending")} className='hover:underline cursor-pointer'>Trending</li>
         </ul>
         <div className='flex gap-1 items-center'>
-            <input type="text" placeholder='Search Here...' value={search} className='w-[150px] border border-yellow-100 p-1 rounded-lg text-white' onChange={handleInput} />
+            <input type="text" placeholder='Search Here...' value={search} className='w-[150px] lg:w-[250px] md:w-[200px] border border-yellow-100 p-1 rounded-lg text-white' onChange={handleInput} />
             <button className='bg-rose-400 p-1.5 md:px-3 rounded-lg text-white cursor-pointer' onClick={getData}>Search</button>
         </div>
       </nav>
@@ -60,7 +60,7 @@ const News = () => {
       animation: 'scroll 20s linear infinite',
     }}
   >
-    🔥 Breaking News : India launches new satellite | 🌍 Global Markets Rally | 🏏 Cricket World Cup Highlights | ⚽ Football World Cup highlights | 🛠️ Tech Giant Unveils New AI Tools | 💡 Stay Tuned !
+    🔥 Breaking News : India launches new satellite | 🌍 Global Markets Rally | 🏏 Cricket World Cup Highlights | ⚽ Football World Cup Highlights | 🛠️ Tech Giant Unveils New AI Tools | 💡 Stay Tuned !
   </div>
 
   <style>
