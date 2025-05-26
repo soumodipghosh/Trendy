@@ -41,7 +41,7 @@ const News = () => {
         <div className='bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white p-2 rounded-lg font-mono'>
             <h1>Trendy</h1>
         </div>
-        <ul className='hidden lg:flex md:flex lg:gap-10 md:gap-5'>
+        <ul className='hidden lg:flex md:flex lg:gap-10 md:gap-5 text-blue-300'>
             <li onClick={() => setSearch("All News")} className='hover:underline cursor-pointer'>All News</li>
             <li onClick={() => setSearch("Trending")} className='hover:underline cursor-pointer'>Trending</li>
         </ul>

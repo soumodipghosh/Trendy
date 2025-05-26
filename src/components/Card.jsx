@@ -29,7 +29,7 @@ const Card = ({ data }) => {
           <img src={curItem.urlToImage} alt="" className='w-[100%] h-[180px] border-l- border-r- rounded-lg' />
           <div className='p-5'>
             <a className='font-bold text-xl mt-1 hover:underline cursor-pointer' onClick={() => readMore(curItem.url)}>{curItem.title}</a>
-            <p className='mt-2 font-semibold'>{curItem.description}</p>
+            <p className='mt-2 font-medium'>{curItem.description}</p>
             <button className='bg-blue-400 border-none cursor-pointer p-2 text-white text-lg rounded-lg mt-4 font-bold' onClick={() => readMore(curItem.url)}>Read More</button>
           </div>
         </div>
