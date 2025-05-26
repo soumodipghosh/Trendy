@@ -37,7 +37,7 @@ const News = () => {
   return (
     <div>
     
-      <nav className='flex items-center justify-around bg-blue-200 p-2 lg:p-2 gap-16 font-semibold fixed top-0 z-50 w-full'>
+      <nav className='flex items-center justify-around bg-blue-200 p-2 lg:p-2 gap-12 font-semibold fixed top-0 z-50 w-full'>
         <div className='bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white p-2 rounded-lg font-mono'>
             <h1>Trendy</h1>
         </div>
