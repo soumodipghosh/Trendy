@@ -18,13 +18,14 @@ const Card = ({ data }) => {
 
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:justify-betwee md:ml-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:justify-between px-0 md:px-10 lg:px-20 ml-0 md:ml-5 lg:ml-0'>
       {data.map((curItem, index) => {
         if (!curItem.urlToImage) {
           return null;
         } else {
           return (
-          <div key={index} className='w-[330px] shadow bg-amber-200 rounded-2xl ml-3.5 lg:-ml-2 mt-5 border-s-amber-100 tracking-wide'>
+          <div key={index} className='w-[330px] shadow bg-amber-200 rounded-2xl ml-3.5 lg:ml-0
+          md:ml-0 mt-5 border-s-amber-100 tracking-wide'>
           <img src={curItem.urlToImage} alt="" className='w-[100%] h-[180px] border-l- border-r- rounded-lg' />
           <div className='p-5'>
             <a className='font-bold text-xl mt-1 hover:underline cursor-pointer' onClick={() => readMore(curItem.url)}>{curItem.title}</a>
