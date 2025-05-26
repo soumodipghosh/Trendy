@@ -30,9 +30,9 @@ const News = () => {
     console.log(e.target.value);
     setSearch(e.target.value)
   }
-  const userInput = (e) => {
-    setSearch(e.target.value)
-  }
+  // const userInput = (e) => {
+  //   setSearch(e.target.value)
+  // }
   useEffect(() => {
     getData()
   }, [search])
@@ -83,12 +83,12 @@ const News = () => {
 
 
       <div className='justify-center gap-2 grid grid-cols-3 lg:flex p-1 lg:gap-5 font-semibold text-white mt-3 md:px-8'>
-        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Sports">Sports</button>
-        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Politics">Politics</button>
-        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Entertainment">Entertain</button>
-        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Health">Health</button>
-        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Fitness">Fitness</button>
-        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={userInput} value="Technology">Tech</button>
+        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => setSearch("Sports")}>Sports</button>
+        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => setSearch("Politics")}>Politics</button>
+        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => setSearch("Entertain")}>Entertain</button>
+        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => setSearch("Health")}>Health</button>
+        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => setSearch("Fitness")}>Fitness</button>
+        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => setSearch("Technology")}>Tech</button>
       </div> 
 
       <div>
