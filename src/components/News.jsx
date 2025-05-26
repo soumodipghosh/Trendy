@@ -8,7 +8,7 @@ const News = () => {
 
   // const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
-  // const get data part 
+  // const get data part beige
 
   const getData = async () => {
   try {
@@ -37,7 +37,7 @@ const News = () => {
   return (
     <div>
     
-      <nav className='flex items-center justify-around bg-blue-200 p-2 lg:p-2 gap-12 font-semibold fixed top-0 z-50 w-full'>
+      <nav className='flex items-center justify-around bg-black p-2 lg:p-2 gap-12 font-semibold fixed top-0 z-50 w-full'>
         <div className='bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white p-2 rounded-lg font-mono'>
             <h1>Trendy</h1>
         </div>
@@ -46,7 +46,7 @@ const News = () => {
             <li onClick={() => setSearch("Trending")} className='hover:underline cursor-pointer'>Trending</li>
         </ul>
         <div className='flex gap-1 items-center'>
-            <input type="text" placeholder='Search Here...' value={search} className='w-[150px] border-none p-1 rounded-lg' onChange={handleInput} />
+            <input type="text" placeholder='Search Here...' value={search} className='w-[150px] border-none p-1 rounded-lg text-white' onChange={handleInput} />
             <button className='bg-rose-400 p-1.5 md:px-3 rounded-lg text-white cursor-pointer' onClick={getData}>Search</button>
         </div>
       </nav>
@@ -80,7 +80,7 @@ const News = () => {
       <div className='justify-center gap-2 grid grid-cols-3 lg:flex p-1 lg:gap-5 font-semibold text-white mt-3 md:px-8'>
         <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => {setSearch("Sports"); getData() }}>Sports</button>
         <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => {setSearch("Politics"); getData() }}>Politics</button>
-        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => {setSearch("Entertain"); getData() }}>Entertain</button>
+        <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => {setSearch("Entertainment"); getData() }}>Entertain</button>
         <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => {setSearch("Health"); getData() }}>Health</button>
         <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => {setSearch("Fitness"); getData() }}>Fitness</button>
         <button className='bg-blue-400 p-1 rounded-xl cursor-pointer lg:px-6 lg:py-1' onClick={() => {setSearch("Technology"); getData() }}>Tech</button>
